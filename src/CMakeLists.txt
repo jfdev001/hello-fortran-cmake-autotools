@@ -29,7 +29,8 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 
 # TODO: Link and include the autotool built dependency 
 # TODO: maybe need two links: one for rte one for rrtmgp?
-
+target_link_libraries(${PROJECT_NAME} rte)
+target_link_libraries(${PROJECT_NAME} rrtmgp)
 
 #add_dependencies(${PROJECT_NAME} ${rte-rrtmgp_LIBRARY})
 #target_link_libraries(${PROJECT_NAME} ${rte-rrtmgp_LIBRARY})
