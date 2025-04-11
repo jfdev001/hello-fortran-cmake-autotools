@@ -28,6 +28,12 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 )
 
 # TODO: Link and include the autotool built dependency 
+# TODO: maybe need two links: one for rte one for rrtmgp?
+
+
+#add_dependencies(${PROJECT_NAME} ${rte-rrtmgp_LIBRARY})
+#target_link_libraries(${PROJECT_NAME} ${rte-rrtmgp_LIBRARY})
+#target_include_directories(${PROJECT_NAME} ${rte-rrtmgp_INCLUDE_DIR})
 
 # installation/configuration steps (modified from fotran-lang/stdlib)
 install(

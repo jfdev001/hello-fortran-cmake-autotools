@@ -1,5 +1,5 @@
 #!/usr/bin/bash
 [[ -d build ]] && rm -rf build
-cmake -S . -B build -DCMAKE_INSTALL_PREFIX=build/installed
+cmake -S . -B build -DCMAKE_INSTALL_PREFIX=build/installed 
 cmake --build build 
 ./build/test/test_mo_square
