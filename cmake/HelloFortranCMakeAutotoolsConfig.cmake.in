@@ -1,0 +1,16 @@
+# from libiconmath
+@PACKAGE_INIT@
+
+# from libiconmath 
+# note test-drive/template.cmake and fftpack/install/CMakeLists.txt uses IF guard)
+include("${CMAKE_CURRENT_LIST_DIR}/@PROJECT_NAME@Targets.cmake")
+
+include(CMakeFindDependencyMacro)
+
+# TODO: find the rte dependency...
+
+include(FindPackageHandleStandardArgs)
+find_package_handle_standard_args(
+    @PROJECT_NAME@ REQUIRED_VARS @PROJECT_NAME@_DIR
+)
+
