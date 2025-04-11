@@ -9,6 +9,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake")
 include("${PROJECT_SOURCE_DIR}/cmake/helper.cmake")
 
 include(ExternalProject)
+include(FetchContent)
 message(STATUS "adding dependencies")
 add_subdirectory(dependencies)
 
