@@ -11,19 +11,19 @@ set(rte-rrtmgp_prefix "${CMAKE_BINARY_DIR}/dependencies/${rte-rrtmgp_PROJECT}-pr
 set(rte-rrtmgp_INCLUDE_DIR "${rte-rrtmgp_prefix}/${rte-rrtmgp_PROJECT}-build")
 set(rte-rrtmgp_INCLUDE_DIR ${rte-rrtmgp_INCLUDE_DIR} PARENT_SCOPE)
 
-set(configure "${rte-rrtmgp_prefix}/${rte-rrtmgp_PROJECT}/configure") # TODO: remove
+set(rte-rrtmgp_SOURCE_DIR ${PROJECT_SOURCE_DIR}/dependencies/rte-rrtmgp)
+
 set(prefix_flag "--prefix=${CMAKE_INSTALL_PREFIX}") 
 
 ExternalProject_Add(
     ${rte-rrtmgp_PROJECT}
-    GIT_REPOSITORY git@github.com:earth-system-radiation/rte-rrtmgp.git
-    GIT_TAG autoconf 
-    GIT_SHALLOW TRUE
+    SOURCE_DIR ${rte-rrtmgp_SOURCE_DIR}
     CONFIGURE_HANDLED_BY_BUILD true
     CONFIGURE_COMMAND <SOURCE_DIR>/configure ${prefix_flag} 
     BUILD_COMMAND make -j
     INSTALL_COMMAND make install
     TEST_COMMAND ""
+    DOWNLOAD_COMMAND ""
 )
 
 set(rte_LIBRARY librte)
