@@ -21,7 +21,7 @@ ExternalProject_Add(
     CONFIGURE_HANDLED_BY_BUILD true
     CONFIGURE_COMMAND <SOURCE_DIR>/configure ${prefix_flag} 
     BUILD_COMMAND make -j
-    INSTALL_COMMAND make install
+    INSTALL_COMMAND ""
     TEST_COMMAND ""
     DOWNLOAD_COMMAND ""
 )
